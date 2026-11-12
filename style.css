@@ -1,0 +1,118 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    color: #F4F7FF;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 380px;
+    padding: 28px;
+    background: rgba(118, 136, 178, 0.94);
+    border: 1px solid #2C3854;
+    border-radius: 24px;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+}
+
+.calculator h2 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 22px;
+    color: #F4F7FF;
+}
+
+.calculator input {
+    width: 100%;
+    height: 78px;
+    padding: 16px;
+    margin-bottom: 22px;
+    background: #0C1425;
+    border: 1px solid #293650;
+    border-radius: 14px;
+    color: #F4F7FF;
+    font-family: inherit;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: right;
+    outline: none;
+}
+
+.calculator > div {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.calculator button {
+    width: 100%;
+    min-width: 0;
+    height: 58px;
+    margin: 0;
+    border: 1px solid transparent;
+    border-radius: 13px;
+    background: #49576f;
+    color: #F4F7FF;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.calculator button:hover {
+    background: #2A3A57;
+    transform: translateY(-2px);
+}
+
+.calculator button:active {
+    transform: scale(0.96);
+}
+
+.calculator button.ac {
+    background: #E65F78;
+    color: white;
+}
+
+.calculator button.ac:hover {
+    background: #F0788D;
+    box-shadow: 0 5px 18px rgba(230, 95, 120, 0.25);
+}
+
+.calculator button.del {
+    background: #263651;
+    color: #70E1D0;
+    border-color: #354762;
+}
+
+.calculator button.del:hover {
+    background: #344966;
+}
+
+.calculator button:nth-child(4n),
+.calculator button:nth-child(3) {
+    color: #70E1D0;
+}
+
+.calculator button:last-child {
+    background: #70E1D0;
+    color: #0B1020;
+    grid-column: span 2;
+}
+
+.calculator button:last-child:hover {
+    background: #91F2E3;
+    box-shadow: 0 5px 18px rgba(112, 225, 208, 0.2);
+}
